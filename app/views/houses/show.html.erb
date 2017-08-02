@@ -10,3 +10,8 @@
 
 <h3>Members</h3>
 <a href=""> Add New Family Member </a>
+<ol>
+  <% @house.characters.each do |h| %>
+    <li><a href="<%= house_character_path("#{h.house_id}", "#{h.id}") %>"><%= h.name %></a></li>
+  <% end %>
+</ol>
