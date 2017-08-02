@@ -9,7 +9,7 @@
 <img src="<%= @house.banner_img %>">
 
 <h3>Members</h3>
-<a href=""> Add New Family Member </a>
+<%= link_to "Add New Member", new_house_character_path(@house) %>
 <ol>
   <% @house.characters.each do |h| %>
     <li><a href="<%= house_character_path("#{h.house_id}", "#{h.id}") %>"><%= h.name %></a></li>
