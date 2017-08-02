@@ -1,7 +1,7 @@
 <%= link_to "Back To All Houses", houses_path %>
 <h2><%= @house.name %></h2>
 <h5><%= @house.motto %></h5>
-
+<%= link_to "Edit/Remove", edit_house_path(@house) %>
 
 <p><%= @house.sigil %></p>
 <p><%= @house.location %></p>

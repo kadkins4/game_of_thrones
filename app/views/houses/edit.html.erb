@@ -1,0 +1,25 @@
+<h2>Edit/Delete House</h2>
+<h5>'A mind needs books, like a sword needs a whetstone.'</h5>
+
+<%= form_for @house, method: :put do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br>
+  <%= f.label :sigil %>
+  <%= f.text_field :sigil %>
+  <br>
+  <%= f.label :motto %>
+  <%= f.text_field :motto %>
+  <br>
+  <%= f.label :location %>
+  <%= f.text_field :location %>
+  <br>
+  <%= f.label :banner_img %>
+  <%= f.text_field :banner_img %>
+  <br>
+  <%= f.submit "Redeclare Your Allegiance" %> <%= link_to "Cancel", house_path(@house) %>
+<% end %>
+
+<%= form_for @house, method: :delete do |f| %>
+  <%= f.submit "Remove House" %>
+<% end %>

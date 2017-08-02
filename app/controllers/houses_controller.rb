@@ -14,7 +14,28 @@ class HousesController < ApplicationController
 
   def create
     @house = House.create!(house_params)
+    flash[:notice] = "Successfully created #{@house.name}!"
+
     redirect_to house_path(@house)
+  end
+
+  def edit
+    @house = House.find(params[:id])
+  end
+
+  def update
+    @house = House.find(params[:id])
+    @house.update!(house_params)
+    flash[:notice] = "Successfully updated #{@house.name}!"
+
+    redirect_to house_path(@house)
+  end
+
+  def destroy
+    @house = House.find(params[:id])
+    @house.destroy!
+
+    redirect_to houses_path
   end
 
 private
