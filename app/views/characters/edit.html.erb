@@ -1,0 +1,22 @@
+<h2><%= @character.name %></h2>
+
+<%= form_for [@house, @character] do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br>
+  <%= f.label :quote %>
+  <%= f.text_field :quote %>
+  <br>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <br>
+  <%= f.label :img_url %>
+  <%= f.text_field :img_url %>
+  <br>
+  <%= f.submit "Update" %> <%= link_to "Cancel", house_character_path(@house, @character) %>
+<% end %>
+
+<p>The Pit</p>
+<%= form_for [@house, @character] do |f| %>
+  <%= f.submit "Kill", method: :destroy %>
+<% end %>
