@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GameOfThrones</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <nav>
+      <p class='alert'> <%= flash[:alert] %> </p>
+      <p class='notice'> <%= flash[:notice] %> </p>
+    </nav>
+    <h1>Game Of Thrones</h1>
+    <%= yield %>
+
+
+    <footer> by Kendall Adkins </footer>
+  </body>
+</html>
