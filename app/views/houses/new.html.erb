@@ -1,0 +1,21 @@
+<h2>A New House Is Born</h2>
+<h5>'You either live or die, when you play the game of thrones'</h5>
+
+<%= form_for @house do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br>
+  <%= f.label :sigil %>
+  <%= f.text_field :sigil %>
+  <br>
+  <%= f.label :motto %>
+  <%= f.text_field :motto %>
+  <br>
+  <%= f.label :location %>
+  <%= f.text_field :location %>
+  <br>
+  <%= f.label :banner_img %>
+  <%= f.text_field :banner_img %>
+  <br>
+  <%= f.submit "Climb The Ladder" %>
+<% end %>

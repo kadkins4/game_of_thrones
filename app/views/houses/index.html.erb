@@ -1,1 +1,8 @@
 <h2>House Overview</h2>
+
+<%= link_to "Create New House", new_house_path %>
+
+<% @houses.each do |h| %>
+  <h3><a href="/houses/<%= h.id %>"><%= h.name %></a></h3>
+  <img src="<%= h.banner_img %>"/>
+<% end %>
