@@ -18,24 +18,37 @@
  src: url('game_of_thrones.ttf') format("truetype");
 }
 
-body {
-  background-color: rgba(10, 10, 10, 1);
-  color: rgba(255, 255, 255, 0.5);
+html {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  width: 90%;
+  height: 100%;
+  background-color: #000505;
+  background-image: url("https://www.transparenttextures.com/patterns/snow.png");
+  color: rgba(255, 255, 255, 0.5);
+  display: inline-flex;
   flex-direction: column;
   font-family: "thrones";
 }
 
 nav {
   padding: 0 20px 0 20px;
-  background-color: white;
+  background-color: rgba(200, 200, 200, .8);
   border-bottom: 2px solid grey;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-h1 { color: black; }
+h1 {
+  color: black;
+  font-size: 26px;
+}
 
 .alert { color: red; }
 
@@ -51,19 +64,58 @@ h2 { padding: 20px 0 0 0; }
 
 h5 { padding: 0 0 20px 0; }
 
-h2, h5, h3 {
+h2, h5 {
   text-align: center;
   margin: 0;
   text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+h3 {
+  font-size: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .index {
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
+  flex-grow: 1;
   flex-wrap: wrap;
   justify-content: center;
 }
 
+.house-index {
+  margin: .5%;
+  width: 20%;
+  height: 20%;
+}
+
 p, a {
   color: white;
+}
+
+p {
+  font-size: 10px;
+}
+
+footer {
+  margin: 5px;
+}
+
+footer a {
+  border: 2px solid transparent;
+  text-decoration: none;
+  color: #393C3E;
+  text-transform: uppercase;
+  padding: 7px 0 2px 0;
+}
+
+footer a:hover {
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+  color: #64686B;
+  border-radius: 50%;
+  transition: color 2s linear .5s, border-radius 2s linear .5s;
 }
