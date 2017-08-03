@@ -6,14 +6,19 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="app/assets/stylesheets/application.css">
   </head>
-
   <body>
     <nav>
-      <p class='alert'> <%= flash[:alert] %> </p>
-      <p class='notice'> <%= flash[:notice] %> </p>
+      <div class="logo">
+        <a href="/houses"><h1>Game of Thrones</h1></a>
+      </div>
+      <div class="messages">
+        <% flash.each do |type, message| %>
+          <p class="flash <%= type %>"> <%= message %></p>
+        <% end %>
+      </div>
     </nav>
-    <h1>Game Of Thrones</h1>
 
     <%= yield %>
 
