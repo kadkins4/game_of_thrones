@@ -16,7 +16,4 @@
   <%= f.submit "Update" %> <%= link_to "Cancel", house_character_path(@house, @character) %>
 <% end %>
 
-<p>The Pit</p>
-<%= form_for [@house, @character] do |f| %>
-  <%= f.submit "Kill", method: :destroy %>
-<% end %>
+<%= link_to "Kill", house_character_path(@house, @character), method: :delete %>

@@ -28,12 +28,13 @@ html {
 body {
   width: 90%;
   height: 100%;
-  background-color: #000505;
+  background-color: #000708;
   background-image: url("https://www.transparenttextures.com/patterns/snow.png");
   color: rgba(255, 255, 255, 0.5);
   display: inline-flex;
   flex-direction: column;
   font-family: "thrones";
+  align-items: center;
 }
 
 nav {
@@ -43,6 +44,8 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  width: 100%;
+  margin: 0 0 10px 0;
 }
 
 h1 {
@@ -98,6 +101,7 @@ h3 {
   flex-grow: 1;
   flex-wrap: wrap;
   justify-content: space-between;
+  width: 75%;
 }
 
 p, a {
@@ -110,6 +114,9 @@ p {
 
 footer {
   margin: 5px;
+  padding: 20px 0 0 0;
+  border-top: 2px solid white;
+  width: 100%;
 }
 
 footer a {
