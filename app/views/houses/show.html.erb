@@ -3,15 +3,20 @@
 <h5><%= @house.motto %></h5>
 <%= link_to "Edit/Remove", edit_house_path(@house) %>
 
-<p><%= @house.sigil %></p>
-<p><%= @house.location %></p>
+<div class="house-show">
+  <div class="house-spec">
+    <p><%= @house.sigil %></p>
+    <p><%= @house.location %></p>
+    <img src="<%= @house.banner_img %>">
+  </div>
+  <div class="house-member">
+    <h3>Members</h3>
+    <%= link_to "Add New Member", new_house_character_path(@house) %>
+    <ol>
+      <% @house.characters.each do |h| %>
+        <li><a href="<%= house_character_path("#{h.house_id}", "#{h.id}") %>"><%= h.name %></a></li>
+      <% end %>
+    </ol>
+  </div>
 
-<img src="<%= @house.banner_img %>">
-
-<h3>Members</h3>
-<%= link_to "Add New Member", new_house_character_path(@house) %>
-<ol>
-  <% @house.characters.each do |h| %>
-    <li><a href="<%= house_character_path("#{h.house_id}", "#{h.id}") %>"><%= h.name %></a></li>
-  <% end %>
-</ol>
+</div>
