@@ -1,6 +1,8 @@
+<%= link_to "Back to #{@character.house.name}", house_path(@character.house_id) %>
+
 <h2> <%= @character.name %> </h2>
 <h5><%= @character.quote %></h5>
-<%= link_to "Back to #{@character.house.name}", house_path(@character.house_id) %>
 <p><%= @character.title %></p>
+<img src="<%= @character.img_url %>" class="char-prof">
 
 <%= link_to "Edit/Kill", edit_house_character_path(@character.house_id, @character) %>
